@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="lunch" data-sandwich="tuna" data-chips="Cape Cod" data-drink="soda">Lunch Order</p>
+
+  <script>
+     const element = document.querySelector('#lunch')
+    
+     //get value of an attribute
+
+     const sandwich = element.getAttribute('data-sandwich')
+     console.log(sandwich)
+
+     //set an attirbute type
+    const newSandwich = element.setAttribute('data-sandwich', 'ham')
+     console.log("after changing sandwich type: ", element)
+
+     //remove an attribute:
+     element.removeAttribute('data-chips')
+
+     console.log("after remove element: " , element)
+
+     // Check if an element has an attribute:
+
+     if( element.hasAttribute('data-drink') ){
+       console.log('Add a drink!!!')
+     }
+
+
+
+  </script>
+</body>
+</html>
